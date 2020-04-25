@@ -10,7 +10,7 @@ class Triangle
   
   def kind 
     #binding.pry
-    raise TriangleError 
+    raise TriangleError if @side_one <= 0 || @side_two <= 0 || @side_three <= 0
     if @side_one == @side_two && @side_two == @side_three
       return :equilateral
     elsif @side_three == @side_one || @side_three == @side_two || @side_one == @side_two
